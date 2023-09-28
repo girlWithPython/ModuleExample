@@ -13,8 +13,7 @@ terraform {
 
 # Provider Block
 
-provider "azurerm" {
-    #version         =   "~> 2.0"
+provider "azurerm" {    
     client_id       =   var.client_id
     client_secret   =   var.client_secret
     subscription_id =   var.subscription_id
@@ -23,8 +22,7 @@ provider "azurerm" {
     features {}
 }
 
-provider "azuread" {
-    version         =   ">= 0.11"
+provider "azuread" {    
     client_id       =   var.client_id
     client_secret   =   var.client_secret
     tenant_id       =   var.tenant_id
@@ -40,6 +38,6 @@ module "storageAccount" {
 }
 
 module "aks" {
-  source    =     "./azure/aks"
+  source    =     "./aks"
   env       =     "dev"
 }
