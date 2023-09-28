@@ -36,7 +36,7 @@ variable "tags" {
     description =   "Resouce tags"
     type        =   map(string)
     default     =   {
-        "author"        =   "Vamsi"
+        "author"        =   "Nobody"
         "deployed_with" =   "Terraform"
     }
 }
