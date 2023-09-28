@@ -4,7 +4,6 @@
 
 
 provider "azurerm" {
-    version         =   ">= 2.10"
     client_id       =   var.client_id
     client_secret   =   var.client_secret
     subscription_id =   var.subscription_id
@@ -29,7 +28,7 @@ resource "random_string" "sa_name" {
    special  =   false
    lower    =   true
    upper    =   false
-   number   =   false
+   #number   =   false   
 }
 
 #

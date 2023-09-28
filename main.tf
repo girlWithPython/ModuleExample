@@ -29,6 +29,13 @@ provider "azuread" {
     alias           =   "ad"
 }
 
+terraform {
+  backend “remote” {
+    hostname = “app.terraform.io”
+    organization = “pravdorubka1979”    
+  }
+}
+
 module "linuxvm" {
   source  =   "./linuxVM"
 }
@@ -37,7 +44,7 @@ module "storageAccount" {
   source  =   "./storageAccount"
 }
 
-module "aks" {
-  source    =     "./aks"
-  env       =     "dev"
-}
+# module "aks" {
+#   source    =     "./aks"
+#   env       =     "dev"
+# }
