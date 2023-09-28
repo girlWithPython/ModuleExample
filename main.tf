@@ -29,13 +29,6 @@ provider "azuread" {
     alias           =   "ad"
 }
 
-terraform {
-  backend “remote” {
-    hostname = “app.terraform.io”
-    organization = “pravdorubka1979”    
-  }
-}
-
 module "linuxvm" {
   source  =   "./linuxVM"
 }
